@@ -1,9 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Header from "@/components/Header/Header";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <Header />
       <main className={styles.main}>
         <Image
           className={styles.logo}
@@ -30,6 +32,7 @@ export default function Home() {
             
             Deploy now
           </a>
+
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
