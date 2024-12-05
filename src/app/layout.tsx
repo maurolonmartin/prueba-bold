@@ -3,9 +3,9 @@ import { Montserrat } from 'next/font/google';
 import "./globals.css";
 
 const montserrat = Montserrat({
-  subsets: ['latin'], // Adjust subsets if needed
-  weights: ['400', '500', '700'], // Include the weights you need
-  variable: '--font-montserrat', // Optional: Define a CSS variable for the font
+  subsets: ['latin'],
+  weights: ['400', '500', '700'], 
+  variable: '--font-montserrat', 
 });
 
 
