@@ -1,22 +1,22 @@
-//import Image from "next/image";
-import styles from "./page.module.scss";
+import React from "react";
 import Header from "@/components/Header/Header";
-import {fetchTransactions} from "../services/apiService"; 
-
+import SalesSummaryCard from "@/components/SalesSummaryCard/SalesSummaryCard";
+import Tabs from "@/components/Tabs/Tabs";
+import HomeClient from "../components/HomeComponent/HomeClient"; // Client Component
+import { fetchTransactions } from "@/services/apiService";
+//import { Transaction } from "@/types/transactions";
 
 export default async function Home() {
-  const data = await fetchTransactions();
-
-  // Log the data on the server-side terminal
-  console.log("Transactions data (server):", data);
+  const transactions = await fetchTransactions(); // Fetch data on the server
 
   return (
-    <div className={styles.page}>
+    <div className="container">
       <Header />
-      <h1>Testing API Data</h1>
-      {/* You can also render the data to ensure it's working */}
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <main>
+        <SalesSummaryCard totalSales={91233950} month="Junio" />
+        <Tabs />
+        <HomeClient transactions={transactions.data} />
+      </main>
     </div>
   );
-
 }

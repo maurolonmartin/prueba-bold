@@ -1,0 +1,17 @@
+.transactionRow {
+    td {
+      padding: 8px 16px;
+      text-align: left;
+      vertical-align: middle;
+      border-bottom: 1px solid #ddd;
+  
+      &:nth-child(5) {
+        text-align: right; //
+      }
+    }
+  
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
+  
