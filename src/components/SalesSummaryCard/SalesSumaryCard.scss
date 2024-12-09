@@ -1,0 +1,58 @@
+@import "../../app/globals.scss";
+
+.sales-summary-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 260px;
+
+    @include respond-to(sm) {
+      padding: 15px; 
+    }
+  
+    @include respond-to(xs) {
+      padding: 10px;
+    }
+  
+    .summary-header {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      width: 100%;
+      border-radius: 16px 16px 0 0;
+  
+      .icon {
+        margin-left: 8px;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      @include respond-to(xs) {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  
+    .amount {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+
+      p {
+        background: linear-gradient(245deg, var(--main-red), var(--main-blue) 83.33%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  
+    .date {
+      font-size: 0.9rem;
+    }
+  }
+  

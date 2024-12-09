@@ -41,6 +41,7 @@
     line-height: 24px;
     letter-spacing: -0.01em;
     list-style-position: inside;
+    color: white
   }
 
   li:not(:last-of-type) {
@@ -108,7 +109,6 @@
   }
 }
 
-/* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
     background: var(--button-primary-hover);
@@ -162,8 +162,5 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-}
+
+
