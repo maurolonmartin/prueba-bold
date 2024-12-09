@@ -4,7 +4,14 @@ export const fetchTransactions = async () => {
     if (!response.ok) {
       throw new Error(`Failed to fetch transactions: ${response.statusText}`);
     }
-    return await response.json();
+
+    const result = await response.json();
+
+    if (result?.data) {
+      return result.data; 
+    }
+
+    return [];
   } catch (error) {
     console.error("Error fetching transactions:", error);
     throw error;

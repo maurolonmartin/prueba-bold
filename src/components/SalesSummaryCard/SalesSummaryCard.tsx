@@ -1,4 +1,6 @@
 import React from "react";
+import "./SalesSumaryCard.scss";
+import { formatCurrency } from "@/utils/formatData";
 
 interface SalesSummaryCardProps {
   totalSales: number;
@@ -7,10 +9,16 @@ interface SalesSummaryCardProps {
 
 const SalesSummaryCard: React.FC<SalesSummaryCardProps> = ({ totalSales, month }) => (
   <div className="sales-summary-card">
-    <h3>Total de ventas de {month}</h3>
-    <p>${totalSales.toLocaleString()}</p>
-    <span>{month}, 2024</span>
+    <div className="summary-header header">
+      Total de ventas de {month}
+      <span className="icon material-icons">info</span>
+    </div>
+    <div className="amount">
+      <p>${formatCurrency(totalSales)}</p>
+    </div>
+    <div className="date">{month}, 2024</div>
   </div>
+
 );
 
 export default SalesSummaryCard;

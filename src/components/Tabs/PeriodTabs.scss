@@ -1,0 +1,30 @@
+.period-selector {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 16px; 
+    padding: 10px 0;
+    background-color: #ffffff;
+    width: 95%;
+    border-radius: 16px;
+  
+    .period-option {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #16213e;
+      background: white;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background: #f5f5f5;
+      }
+  
+      &.active {
+        color: #3949ab;
+        font-weight: bold;
+        background: #e8eaf6; 
+      }
+    }
+  }
+  

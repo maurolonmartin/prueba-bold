@@ -39,7 +39,6 @@ const PaymentMethod: React.FC<PaymentMethodProps> = ({
         />
       )}
       <div>
-        {franchise && <span>{franchise}</span>}
         {transactionReference && (
           <div>**** {String(transactionReference).slice(-4)}</div>
         )}

@@ -15,6 +15,24 @@
   }
 }
 
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1440px
+);
+
+@function breakpoint($size) {
+  @return map-get($breakpoints, $size);
+}
+
+@mixin respond-to($size) {
+  @media (max-width: #{breakpoint($size)}) {
+    @content;
+  }
+}
+
 html,
 body {
   max-width: 100vw;

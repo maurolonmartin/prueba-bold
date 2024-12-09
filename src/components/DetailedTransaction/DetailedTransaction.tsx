@@ -28,7 +28,7 @@ const TransactionDetailSidebar: React.FC<TransactionDetailSidebarProps> = ({
 
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
-      <div className="header">
+      <div className="header-sidebar header">
         <div className="status">
           <span className="icon material-icons">
             {transaction.status === "SUCCESSFUL" ? "check_circle" : "error"}
