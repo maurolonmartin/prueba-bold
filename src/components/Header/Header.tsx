@@ -1,5 +1,5 @@
 import React from "react";
-import './Header.scss';
+import './header.scss';
 import Image from "next/image";
 
 const Header: React.FC = () => (
