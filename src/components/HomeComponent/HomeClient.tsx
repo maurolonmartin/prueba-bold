@@ -93,15 +93,6 @@ const HomeClient: React.FC = () => {
     setSidebarOpen(true);
   };
 
-
-  const handleApplyFilters = (appliedFilters: string[]) => {
-    if (appliedFilters.includes("Ver todos")) {
-      setFilters(["Ver todos"]); 
-    } else {
-      setFilters(appliedFilters);
-    }
-  };
-
   return (
     <div className="home-page">
       <Header />
