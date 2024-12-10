@@ -1,11 +1,12 @@
 import React from "react";
+import Image from "next/image";
 import './DetailedTransaction.scss';
 import { Transaction } from "@/types/transactions";
 import { formatCurrency, formatDate, formatStatus } from "@/utils/formatData";
 
 interface TransactionDetailSidebarProps {
   isOpen: boolean;
-  transaction: Transaction| null;
+  transaction: Transaction | null;
   onClose: () => void;
 }
 
@@ -62,10 +63,12 @@ const TransactionDetailSidebar: React.FC<TransactionDetailSidebarProps> = ({
           <div className="detail-item">
             <span className="label">Método de pago</span>
             <span className="value">
-              <img
+              <Image
                 src={`/icons/${transaction.paymentMethod.toLowerCase()}.png`}
                 alt={transaction.paymentMethod}
-                style={{ width: "20px", marginRight: "8px" }}
+                width={20}
+                height={20}
+                style={{ marginRight: "8px" }}
               />
               {transaction.franchise ? `**** ${transaction.transactionReference}` : transaction.paymentMethod}
             </span>
@@ -78,8 +81,6 @@ const TransactionDetailSidebar: React.FC<TransactionDetailSidebarProps> = ({
       </div>
     </div>
   );
-
-
 };
 
 export default TransactionDetailSidebar;
